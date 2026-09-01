@@ -9,9 +9,10 @@ redirect_from:
 
 {% include base_path %}
 
-<iframe
-  src="{{ base_path }}/files/cv.pdf"
-  width="100%"
-  height="1200px"
-  style="border: none;">
-</iframe>
+<div style="text-align: center; margin-top: 40px;">
+  <a href="{{ base_path }}/files/cv.pdf" 
+     class="btn btn--primary"
+     target="_blank">
+    View CV
+  </a>
+</div>
