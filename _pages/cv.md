@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 
 <div style="text-align: center; margin-top: 40px;">
-  <a href="{{ base_path }}/files/cv.pdf" 
+  <a href="{{ base_path }}/files/Jeon_CV.pdf" 
      class="btn btn--primary"
      target="_blank">
     View CV
