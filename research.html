@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rachel Jeon | Research</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="files/Jeon_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page-content">
+
+  <!--
+    HOW TO ADD A PAPER
+    -------------------
+    Copy one whole "paper" block below (from <div class="paper"> to the matching
+    closing </div>), paste it where you want it in the list, then edit:
+      - paper-num       -> the number in the list (or a year, like on the Teaching page)
+      - paper-title     -> the title of the paper, in quotes
+      - paper-coauthors -> delete this whole line if you're the sole author
+      - paper-venue     -> where it's published (delete if unpublished/working paper)
+      - the <p> inside paper-abstract-text -> the abstract
+      - the href on paper-action -> link to the PDF (e.g. files/paper1.pdf) or a DOI,
+        or delete the whole <a class="paper-action">...</a> if there's nothing to link to
+    To remove an example entry, just delete its whole block.
+  -->
+
+  <h2 class="section-heading">Publications</h2>
+  <div class="papers-list">
+
+    <div class="paper">
+      <div class="paper-num">1.</div>
+      <div class="paper-body">
+        <div class="paper-title">"Replace With Your Published Paper's Title"</div>
+        <div class="paper-coauthors">with Coauthor Name</div>
+        <div class="paper-venue"><em>Journal Name</em>, Year</div>
+        <div class="paper-actions">
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <div class="paper-abstract-text">
+              <p>Replace this paragraph with the paper's abstract.</p>
+            </div>
+          </details>
+          <a class="paper-action" href="files/paper1.pdf" target="_blank" rel="noopener">Published Article</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="section-heading">Working Papers</h2>
+  <div class="papers-list">
+
+    <div class="paper">
+      <div class="paper-num">2.</div>
+      <div class="paper-body">
+        <div class="paper-title">"Replace With Your Working Paper's Title"</div>
+        <div class="paper-actions">
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <div class="paper-abstract-text">
+              <p>Replace this paragraph with the paper's abstract.</p>
+            </div>
+          </details>
+          <a class="paper-action" href="files/paper2.pdf" target="_blank" rel="noopener">Manuscript</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-num">1.</div>
+      <div class="paper-body">
+        <div class="paper-title">"Replace With Another Working Paper's Title"</div>
+        <div class="paper-coauthors">with Coauthor Name</div>
+        <div class="paper-actions">
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <div class="paper-abstract-text">
+              <p>Replace this paragraph with the paper's abstract.</p>
+            </div>
+          </details>
+          <a class="paper-action" href="files/paper3.pdf" target="_blank" rel="noopener">Manuscript</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>Rachel Jeon &middot; The University of Texas at Austin</p>
+</footer>
+
+</body>
+</html>
