@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rachel Jeon | Fieldwork</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fieldwork.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="files/Jeon_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="fieldwork.html" class="active">Fieldwork</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="page-content">
+
+  <div class="fieldwork-header">
+    <!-- EDIT ME: update this line as you add photos from new places. -->
+    <div class="fieldwork-tagline">Country A &middot; Country B</div>
+    <h1 class="fieldwork-title">Fieldwork</h1>
+  </div>
+
+  <div class="carousel">
+    <button class="carousel-arrow" onclick="showPhoto(current - 1)" aria-label="Previous photo">&larr;</button>
+    <div class="carousel-frame">
+      <img id="carousel-img" src="" alt="" />
+    </div>
+    <button class="carousel-arrow" onclick="showPhoto(current + 1)" aria-label="Next photo">&rarr;</button>
+  </div>
+
+  <p id="fieldwork-caption" class="fieldwork-caption"></p>
+  <p id="fieldwork-location" class="fieldwork-location"></p>
+  <p id="fieldwork-counter" class="fieldwork-counter"></p>
+
+</main>
+
+<footer class="site-footer">
+  <p>Rachel Jeon &middot; The University of Texas at Austin</p>
+</footer>
+
+<script>
+  /*
+    HOW TO ADD A PHOTO
+    -------------------
+    1. Upload your photo file into the images/fieldwork/ folder on GitHub
+       (create that folder the first time by naming a file "fieldwork/yourphoto.jpg"
+       when uploading into the images/ directory).
+       Photos must be .jpg, .jpeg, .png, .webp, or .gif -- NOT .heic (iPhones save
+       photos as .heic by default; convert to .jpg first, e.g. with Preview on Mac:
+       open the photo, File > Export, choose JPEG).
+    2. Add one line below, in the same format as the examples, with:
+         src      -> "images/fieldwork/yourphoto.jpg"
+         caption  -> a short sentence about the photo
+         location -> "City, Country"
+    3. Save. That's it -- the counter, arrows, and tagline all update automatically.
+  */
+  const photos = [
+    { src: "images/500x300.png", caption: "Replace with a caption for this photo.", location: "City, Country" },
+    { src: "images/500x300.png", caption: "Replace with a caption for this photo.", location: "City, Country" },
+  ];
+
+  let current = 0;
+
+  function showPhoto(index) {
+    current = (index + photos.length) % photos.length;
+    const p = photos[current];
+    document.getElementById('carousel-img').src = p.src;
+    document.getElementById('carousel-img').alt = p.caption;
+    document.getElementById('fieldwork-caption').textContent = p.caption;
+    document.getElementById('fieldwork-location').textContent = p.location;
+    document.getElementById('fieldwork-counter').textContent = (current + 1) + ' / ' + photos.length;
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') showPhoto(current + 1);
+    if (e.key === 'ArrowLeft') showPhoto(current - 1);
+  });
+
+  showPhoto(0);
+</script>
+
+</body>
+</html>
